@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+<meta charset="UTF-8">
+<title>حكايتنا ❤️</title>
+
+<style>
+body{
+  margin:0;
+  font-family:Arial;
+  background:linear-gradient(135deg,#ff9a9e,#fad0c4);
+  color:white;
+  text-align:center;
+}
+
+h1{margin-top:30px;}
+
+.gallery{
+  display:flex;
+  justify-content:center;
+  flex-wrap:wrap;
+  gap:15px;
+  margin:30px 0;
+}
+
+.gallery img{
+  width:180px;
+  height:180px;
+  object-fit:cover;
+  border-radius:20px;
+  border:3px solid white;
+  box-shadow:0 10px 25px rgba(0,0,0,0.4);
+  transition:.3s;
+}
+
+.gallery img:hover{
+  transform:scale(1.1);
+}
+
+video,audio{
+  margin:20px 0;
+  border-radius:15px;
+}
+
+.box{
+  background:rgba(255,255,255,.2);
+  margin:20px auto;
+  padding:20px;
+  width:80%;
+  border-radius:15px;
+}
+</style>
+</head>
+
+<body>
+
+<h1>أنا و إنتي ❤️</h1>
+
+<div class="box" id="days"></div>
+
+<div class="box">
+من أول يوم وأنا متأكد إنك أحلى حاجة حصلتلي ❤️  
+<br>كل صورة هنا وراها ذكرى
+</div>
+
+<h2>أغنيتنا 🎵</h2>
+<audio controls autoplay loop>
+  <source src="music/song.mp3" type="audio/mpeg">
+</audio>
+
+<h2>فيديو لذكرياتنا 🎥</h2>
+<video width="360" controls>
+  <source src="video/love.mp4" type="video/mp4">
+</video>
+
+<h2>صورنا ❤️</h2>
+<div class="gallery">
+  <img src="images/img1.jpg">
+  <img src="images/img2.jpg">
+  <img src="images/img3.jpg">
+  <img src="images/img4.jpg">
+  <img src="images/img5.jpg">
+  <img src="images/img6.jpg">
+</div>
+
+<footer>♥ بحبك ♥</footer>
+
+<script>
+let startDate = new Date("2023-02-14"); // عدل التاريخ هنا
+let today = new Date();
+let diff = today - startDate;
+let days = Math.floor(diff / (1000*60*60*24));
+document.getElementById("days").innerText =
+"مكملين مع بعض بقالنا " + days + " يوم ❤️";
+</script>
+
+</body>
+</html>
